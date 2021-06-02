@@ -1,0 +1,13 @@
+.block {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  width: 300px;
+  text-align: left;
+}
+
+.links {
+  margin: 10px 0px;
+}
+
+
