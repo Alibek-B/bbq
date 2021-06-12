@@ -13,3 +13,4 @@ Rails.start()
 ActiveStorage.start()
 
 import 'bootstrap/dist/js/bootstrap'
+require("@fortawesome/fontawesome-free/js/all")
