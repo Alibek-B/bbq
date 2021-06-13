@@ -42,3 +42,4 @@ ru:
   subscriptions:
     subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
+      own_event: 'не может подписаться на свое событие'

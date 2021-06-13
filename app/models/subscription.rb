@@ -10,6 +10,7 @@ class Subscription < ApplicationRecord
 
   validates :user, uniqueness: {scope: :event_id}, if: -> { user.present? }
   validates :user_email, uniqueness: {scope: :event_id}, unless: -> { user.present? }
+  validate :check_owner_event, if: -> { user.present? }
 
   def user_name
     if user.present?
@@ -27,4 +28,7 @@ class Subscription < ApplicationRecord
     end
   end
 
+   def check_owner_event
+     errors.add(:user, message: I18n.t('subscriptions.subscription.own_event')) if event.user == user
+   end
 end
