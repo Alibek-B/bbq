@@ -28,7 +28,7 @@ class Subscription < ApplicationRecord
     end
   end
 
-   def check_owner_event
-     errors.add(:user, message: I18n.t('subscriptions.subscription.own_event')) if event.user == user
-   end
+  def check_owner_event
+    errors.add(:user, :own_event) if event.user == user
+  end
 end
