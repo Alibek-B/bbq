@@ -13,6 +13,8 @@ class User < ApplicationRecord
 
   after_commit :link_subscriptions, on: :create
 
+  mount_uploader :avatar, AvatarUploader
+
   def set_name
     self.name = "Товарисч №#{rand(777)}" if self.name.blank?
   end

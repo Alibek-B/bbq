@@ -7,6 +7,7 @@ ru:
       user:
         email: "Email"
         name: "Имя"
+        avatar: "Аватарка"
         password: "Пароль"
         password_confirmation: "Подтверждение пароля"
       event:
@@ -14,6 +15,14 @@ ru:
         address: "Место проведения"
         datetime: "Дата и время"
         description: "Описание"
+    errors:
+      models:
+        subscription:
+          attributes:
+            user:
+              own_event: 'не может подписаться на свое событие'
+            user_email:
+              check_email: 'занят'
   controllers:
     events:
       created: "Событие было успешно создано!"
@@ -42,13 +51,3 @@ ru:
   subscriptions:
     subscription:
       destroy_confirm: 'Вы уверены, что хотите удалить эту подписку?'
-
-  activerecord:
-    errors:
-      models:
-        subscription:
-          attributes:
-            user:
-              own_event: 'не может подписаться на свое событие'
-            user_email:
-              check_email: 'занят'
