@@ -46,7 +46,7 @@
       <p><%= render partial: 'users/user', object: @event.user %></p>
   </div>
 
-  <% if @event.subscribers.exists? %>
+  <% if @event.subscriptions.exists? %>
   <div class="event-subscriptions">
     <h4>Пойдут:</h4>
     <div>
