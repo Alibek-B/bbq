@@ -3,6 +3,7 @@ ru:
     models:
       user: "Пользователь"
       event: "Событие"
+      photo: "Фотография"
     attributes:
       user:
         email: "Email"
@@ -15,6 +16,11 @@ ru:
         address: "Место проведения"
         datetime: "Дата и время"
         description: "Описание"
+      comment:
+        user_name: "Ваше имя"
+        body: "Комментарий"
+      photo:
+        photo: "Фотография"
     errors:
       models:
         subscription:
