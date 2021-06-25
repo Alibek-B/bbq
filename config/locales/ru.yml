@@ -89,3 +89,10 @@ ru:
       owner: 'Организатор'
       subject: 'Новое фото к событию'
     link: 'Ссылка на событие'
+  password:
+    edit:
+      password_change: 'Изменение пароля'
+      change_password: 'Изменить пароль'
+      new_password: 'Новый пароль'
+      confirmation: 'Подтверждение'
+      min_characters: '(не менее 6 символов)'
