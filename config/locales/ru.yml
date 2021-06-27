@@ -96,3 +96,18 @@ ru:
       new_password: 'Новый пароль'
       confirmation: 'Подтверждение'
       min_characters: '(не менее 6 символов)'
+      current_password: 'Текущий пароль'
+      update: 'Обновить'
+    new:
+      reset_password: 'Сброс пароля'
+      send: 'Отправить'
+      registration: 'Регистрация'
+      sign_in: 'Войти'
+  deletion:
+    account: 'Удалить аккаунт?'
+    delete: 'Удалить'
+  back: 'Назад'
+  confirm:
+    are_you_sure: 'Вы уверены?'
+
+
