@@ -9,16 +9,16 @@
 
   <div class="field mt-3">
     <%= f.password_field :password, autofocus: true, autocomplete: "new-password",
-      placeholder: t("password.edit.new_password") %>
-    <br><small><%= t("password.edit.min_characters") %></small>
+      placeholder: t("password.edit.new_password"), class: "form-control" %>
+    <small><%= t("password.edit.min_characters") %></small>
   </div>
 
   <div class="field mt-3">
     <%= f.password_field :password_confirmation, autocomplete: "new-password",
-      placeholder: t("password.edit.confirmation") %>
+      placeholder: t("password.edit.confirmation"), class: "form-control" %>
   </div>
 
-  <div class="actions mt-2">
+  <div class="actions mt-3">
     <%= f.submit t("password.new.send"), class: 'btn btn-primary' %>
   </div>
 <% end %>

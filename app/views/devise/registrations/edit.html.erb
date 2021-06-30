@@ -8,7 +8,7 @@
 
   <div class="field">
     <%= f.email_field :email, autofocus: true, autocomplete: "email",
-      placeholder: "email" %>
+      placeholder: "email", class: "form-control" %>
   </div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
@@ -17,9 +17,8 @@
 
   <div class="field mt-4">
     <%= f.password_field :password, autocomplete: "new-password",
-      placeholder: t("password.edit.new_password") %>
+      placeholder: t("password.edit.new_password"), class: "form-control" %>
     <% if @minimum_password_length %>
-    <br>
       <small><%= t("password.edit.min_characters")%></small>
     <% end %>
   </div>
@@ -27,12 +26,12 @@
   <div class="field mt-3">
 
     <%= f.password_field :password_confirmation, autocomplete: "new-password",
-      placeholder: t("password.edit.confirmation") %>
+      placeholder: t("password.edit.confirmation"), class: "form-control" %>
   </div>
 
   <div class="field mt-4">
     <%= f.password_field :current_password, autocomplete: "current-password",
-      placeholder: t("password.edit.current_password") %>
+      placeholder: t("password.edit.current_password"), class: "form-control" %>
   </div>
 
   <div class="actions mt-2">
