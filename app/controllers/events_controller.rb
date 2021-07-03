@@ -3,6 +3,7 @@ class EventsController < ApplicationController
 
   before_action :set_event, only: [:show]
   before_action :set_current_user_event, only: [:edit, :update, :destroy]
+  before_action :password_guard!, only: [:show]
 
   # GET /events or /events.json
   def index
@@ -74,6 +75,20 @@ class EventsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def event_params
-      params.require(:event).permit(:title, :address, :datetime, :description)
+      params.require(:event).permit(:title, :address, :datetime, :description, :pincode)
+    end
+
+    def password_guard!
+      return true if @event.pincode.blank?
+      return true if signed_in? && current_user == @event.user
+
+      if params[:pincode].present? && @event.pincode_valid?(params[:pincode])
+        cookies.permanent["event_#{@event.id}_pincode"] = params[:pincode]
+      end
+
+      unless @event.pincode_valid?(cookies.permanent["event_#{@event.id}_pincode"])
+        flash.now[:alert] = I18n.t('controllers.events.wrong_pincode')
+        render 'password_form'
+      end
     end
 end

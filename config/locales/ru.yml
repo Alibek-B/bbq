@@ -16,6 +16,10 @@ ru:
         address: "Место проведения"
         datetime: "Дата и время"
         description: "Описание"
+        pincode: "Пин-код доступа"
+        send: "Отправить"
+        to_main: "На главную"
+        access_by_pincode: "Доступ только по пин-коду"
       comment:
         user_name: "Ваше имя"
         body: "Комментарий"
@@ -32,6 +36,7 @@ ru:
   controllers:
     events:
       created: "Событие было успешно создано!"
+      wrong_pincode: 'Неверный пин-код!'
     comments:
       destroyed: "Комментарий удален"
       created: "Ваш комментарий добавлен"
