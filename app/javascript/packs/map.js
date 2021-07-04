@@ -3,6 +3,7 @@ var myMap;
 
 function init(){
     // Переменной address присваиваем значение атрибута data-address из application.html.erb
+    if (document.getElementById('map') != null) {
     var address = document.getElementById('map').getAttribute('data-address');
     console.log(address)
     // Создание карты
@@ -35,4 +36,5 @@ function init(){
             alert('Ошибка при определении местоположения');
         }
     );
+}
 }
