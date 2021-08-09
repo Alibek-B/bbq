@@ -5,6 +5,9 @@ ru:
       event: "Событие"
       photo: "Фотография"
     attributes:
+      subscription:
+        user_name: "Имя"
+        user_email: "Почта"
       user:
         email: "Email"
         name: "Имя"
