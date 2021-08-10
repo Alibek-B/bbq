@@ -20,6 +20,9 @@ test:
   <<: *default
   database: db/test.sqlite3
 
+#This is not real data
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: sql
+  user: user_name
+  password: password_database
+  database: database_name
