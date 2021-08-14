@@ -97,6 +97,10 @@ ru:
       owner: 'Организатор'
       subject: 'Новое фото к событию'
     link: 'Ссылка на событие'
+    registration:
+      welcome: 'Привет, товарищ!'
+      instruction: 'Вы можете подтвердить свою почту, перейдя по ссылке ниже.'
+      confirm_my_account: 'Подтвердить'
   password:
     edit:
       password_change: 'Изменение пароля'
@@ -117,5 +121,3 @@ ru:
   back: 'Назад'
   confirm:
     are_you_sure: 'Вы уверены?'
-
-

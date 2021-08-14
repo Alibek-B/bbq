@@ -1,0 +1,5 @@
+<p><%= t('event_mailer.registration.welcome') %></p>
+
+<p><%= t('event_mailer.registration.instruction') %></p>
+
+<p><%= link_to t('event_mailer.registration.confirm_my_account'), confirmation_url(@resource, confirmation_token: @token) %></p>
